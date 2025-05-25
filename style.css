@@ -3,6 +3,195 @@
  * Template: storefront
  * Author: Camille Davis
  * Author URI: https://camilledavis.com/
- * Description: Accessible version of the Storefront theme. 
+ * Description: Accessible version of the Storefront theme.
  * Version:
  */
+
+/**
+ * Raise minimum font size to 18px.
+ */
+
+body {
+  font-size: 1.125rem;
+}
+
+/* Override themes/storefront/style.css */
+
+.site-branding .site-title {
+  letter-spacing: 0;
+}
+
+.header-widget-region .widget,
+.site-branding .site-description,
+.page-template-template-homepage .type-page .storefront-hero__button-edit,
+#comments .comment-list .comment-meta a.comment-date,
+.hentry .entry-header .posted-on,
+.hentry .entry-header .post-author,
+.hentry .entry-header .post-comments,
+.hentry .entry-header .byline,
+.cat-links,
+.tags-links,
+button.small,
+input[type=button].small,
+input[type=reset].small,
+input[type=submit].small,
+.button.small,
+.wc-block-grid__products .wc-block-grid__product .wp-block-button__link.small,
+.added_to_cart.small,
+button.menu-toggle,
+.widget-area .widget {
+  font-size: 1em;
+}
+
+@media (min-width: 768px) {
+  .main-navigation ul.menu ul li a,
+  .main-navigation ul.nav-menu ul li a,
+  .secondary-navigation .menu {
+    font-size: 1em;
+  }
+}
+
+/* Override themes/storefront/assets/css/woocommerce/woocommerce.css */
+
+.site-search,
+.storefront-handheld-footer-bar ul li.cart .count,
+ul.products li.product .star-rating,
+ul.products .wc-block-grid__product .star-rating,
+.wc-block-grid__products li.product .star-rating,
+.wc-block-grid__products .wc-block-grid__product .star-rating,
+.single-product div.product .product_meta,
+.single-product div.product .edit-link,
+#reviews .commentlist li .comment_container .comment-text .star-rating,
+#reviews .commentlist li time,
+#reviews .commentlist li time,
+#reviews .commentlist li p.meta .verified,
+.woocommerce-breadcrumb,
+.widget_price_filter .ui-slider .ui-slider-range,
+#payment .payment_methods li .payment_box fieldset,
+.woocommerce-password-strength,
+ul.order_details li,
+.my_account_orders .button,
+.woocommerce-MyAccount-downloads .button,
+.wc-block-grid__product-onsale,
+.onsale,
+.storefront-sorting,
+dl.variation,
+.wc-item-meta {
+  font-size: 1em;
+}
+
+ul.products li.product .woocommerce-loop-product__title,
+ul.products li.product .woocommerce-loop-category__title,
+ul.products li.product .wc-block-grid__product-title,
+ul.products li.product .wc-block-grid__product-title>a:not(.has-font-size),
+ul.products .wc-block-grid__product .woocommerce-loop-product__title,
+ul.products .wc-block-grid__product .woocommerce-loop-category__title,
+ul.products .wc-block-grid__product .wc-block-grid__product-title,
+ul.products .wc-block-grid__product .wc-block-grid__product-title>a:not(.has-font-size),
+.wc-block-grid__products li.product .woocommerce-loop-product__title,
+.wc-block-grid__products li.product .woocommerce-loop-category__title,
+.wc-block-grid__products li.product .wc-block-grid__product-title,
+.wc-block-grid__products li.product .wc-block-grid__product-title>a:not(.has-font-size),
+.wc-block-grid__products .wc-block-grid__product .woocommerce-loop-product__title,
+.wc-block-grid__products .wc-block-grid__product .woocommerce-loop-category__title,
+.wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-title,
+.wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-title>a:not(.has-font-size) {
+  font-size: 1em;
+}
+
+@media (min-width: 768px) {
+  .site-header-cart .cart-contents .count,
+  .site-header-cart .widget_shopping_cart,
+  ul.products li.product,
+  ul.products .wc-block-grid__product,
+  .wc-block-grid__products li.product,
+  .wc-block-grid__products .wc-block-grid__product,
+  table.my_account_orders {
+    font-size: 1em;
+  }
+}
+
+/* Override plugins/woocommerce/assets/client/blocks/cart.css */
+
+.wp-child-theme-accessible-storefront .is-large.wc-block-cart .wc-block-cart__totals-title,
+.wp-child-theme-accessible-storefront .wc-block-components-quantity-selector .wc-block-components-quantity-selector__button,
+.wp-child-theme-accessible-storefront .wc-block-components-product-badge,
+.wp-child-theme-accessible-storefront .wc-block-components-product-metadata,
+.wp-child-theme-accessible-storefront .editor-styles-wrapper table.wc-block-cart-items .wc-block-cart-items__header,
+.wp-child-theme-accessible-storefront table.wc-block-cart-items .wc-block-cart-items__header,
+.wp-child-theme-accessible-storefront .editor-styles-wrapper table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__quantity .wc-block-cart-item__remove-link,
+.wp-child-theme-accessible-storefront table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__quantity .wc-block-cart-item__remove-link,
+.wp-child-theme-accessible-storefront .wc-block-components-product-sale-badge,
+.wp-child-theme-accessible-storefront .wc-block-components-product-rating-stars__link,
+.wp-child-theme-accessible-storefront .wc-block-components-totals-shipping .wc-block-components-shipping-placeholder__value,
+.wp-child-theme-accessible-storefront .wc-block-components-totals-shipping .wc-block-components-totals-shipping__via,
+.wp-child-theme-accessible-storefront .wc-block-components-notice-banner,
+.wp-child-theme-accessible-storefront .wc-block-components-shipping-rates-control__package-items {
+  font-size: 1em;
+}
+
+/* Override plugins/woocommerce/assets/client/blocks/checkout.css */
+
+.wp-child-theme-accessible-storefront .wp-block-woocommerce-checkout .wc-block-checkout__guest-checkout-notice,
+.wp-child-theme-accessible-storefront .wc-block-components-address-card__edit,
+.wp-child-theme-accessible-storefront .wc-block-components-password-strength,
+.wp-child-theme-accessible-storefront .wc-block-components-totals-shipping .wc-block-components-shipping-placeholder__value,
+.wp-child-theme-accessible-storefront .wc-block-components-totals-shipping .wc-block-components-totals-shipping__via,
+.wp-child-theme-accessible-storefront .wc-block-components-notice-banner,
+.wp-child-theme-accessible-storefront .wc-block-checkout__shipping-method-option-price,
+.wp-child-theme-accessible-storefront .wc-block-components-shipping-rates-control__package-items,
+.wp-child-theme-accessible-storefront .wc-block-components-product-badge,
+.wp-child-theme-accessible-storefront .wc-block-components-product-metadata,
+.wp-child-theme-accessible-storefront .wc-block-components-order-summary .wc-block-components-order-summary-item {
+  font-size: 1em;
+}
+
+/* Override plugins/woocommerce/assets/client/blocks/packages-style.css */
+
+.wp-child-theme-accessible-storefront .wc-block-components-totals-item__description,
+.wp-child-theme-accessible-storefront .wp-child-theme-accessible-storefront .wc-block-components-notice-banner,
+.wp-child-theme-accessible-storefront .wp-child-theme-accessible-storefront .wc-block-components-validation-error,
+.wp-child-theme-accessible-storefront .wc-block-components-chip .wc-block-components-chip__text,
+.wp-child-theme-accessible-storefront .wc-block-components-checkout-step__heading-content,
+.wp-child-theme-accessible-storefront .wc-block-components-checkout-step__description,
+.wp-child-theme-accessible-storefront .wc-block-components-checkbox label,
+.wp-child-theme-accessible-storefront .wc-block-components-radio-control__secondary-description {
+  font-size: 1em;
+}
+
+/* Override plugins/woocommerce/assets/client/blocks/all-products.css */
+
+.wp-child-theme-accessible-storefront .wc-block-grid.has-6-columns .wc-block-grid__product,
+.wp-child-theme-accessible-storefront .wc-block-grid.has-5-columns .wc-block-grid__product,
+.wp-child-theme-accessible-storefront .wc-block-grid.has-6-columns.alignfull .wc-block-grid__product,
+.wp-child-theme-accessible-storefront .wc-block-grid.has-4-columns:not(.alignwide):not(.alignfull) .wc-block-grid__product,
+.wp-child-theme-accessible-storefront .wc-block-grid.has-5-columns.alignfull .wc-block-grid__product,
+.wp-child-theme-accessible-storefront .wc-block-grid.has-3-columns:not(.alignwide):not(.alignfull),
+.wp-child-theme-accessible-storefront .wc-block-components-product-sale-badge,
+.wp-child-theme-accessible-storefront .wc-block-components-product-rating-stars__link
+.wp-child-theme-accessible-storefront .wc-block-components-product-stock-indicator {
+  font-size: 1em;
+}
+
+/**
+ * Remove low-opacity text styles.
+ */
+
+/* Override themes/storefront/assets/css/woocommerce/woocommerce.css */
+
+.price del,
+#reviews .commentlist li time,
+.woocommerce-message a:hover,
+.woocommerce-info a:hover,
+.woocommerce-error a:hover,
+.woocommerce-noreviews a:hover,
+p.no-comments a:hover,
+.woocommerce-message .button:hover,
+.woocommerce-info .button:hover,
+.woocommerce-error .button:hover,
+.woocommerce-noreviews .button:hover,
+p.no-comments .button:hover,
+.site-header-cart .cart-contents .count,
+.storefront-sticky-add-to-cart__content-price {
+  opacity: 1;
+}
