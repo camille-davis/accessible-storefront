@@ -12,3 +12,15 @@ add_filter('storefront_setting_default_values', array($accessible_storefront_cus
 add_action('customize_register', array($accessible_storefront_customizer, 'add_custom_settings'));
 add_action('wp_head', array($accessible_storefront_customizer, 'add_custom_css'), 8);
 
+// Add parentheses to item count in header cart link (see accessible-storefront.js for js version).
+function storefront_cart_link() {
+  if (! storefront_woo_cart_available()) {
+    return;
+  }
+?>
+  <a class="cart-contents" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php esc_attr_e('View your shopping cart', 'storefront'); ?>">
+    <?php /* translators: %d: number of items in cart */ ?>
+    <?php echo wp_kses_post(WC()->cart->get_cart_subtotal()); ?> <span class="count">(<?php echo wp_kses_data(sprintf(_n('%d item', '%d items', WC()->cart->get_cart_contents_count(), 'storefront'), WC()->cart->get_cart_contents_count())); ?>)</span>
+  </a>
+<?php
+}

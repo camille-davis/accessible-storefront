@@ -241,3 +241,33 @@ textarea:focus,
 a.remove::before {
   color: unset;
 }
+
+/**
+ * Change cart button layout.
+ */
+
+@media (min-width: 768px) {
+  .site-header-cart .cart-contents {
+    display: flex;
+    padding: .6180469716em 1.41575em;
+    border-radius: .25rem;
+  }
+
+  .site-header-cart > li:first-child {
+    padding: calc(1.618em - .5rem) 0;
+  }
+
+  .site-header-cart .cart-contents::after {
+    order: 0;
+    margin-right: .5rem;
+  }
+
+  .site-header-cart .cart-contents > span {
+    order: 1;
+  }
+
+  .site-header .widget_shopping_cart,
+  .woocommerce-mini-cart__buttons {
+    border-radius: 0 0 .25rem .25rem;
+  }
+}
