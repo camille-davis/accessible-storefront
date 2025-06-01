@@ -285,6 +285,9 @@ class Accessible_Storefront_Customizer
     .widget_product_search input[type="search"]:not(:focus) {
       box-shadow: inset 0 0 0 .125rem ' . get_theme_mod('accessible_storefront_header_search_border_color') . ';
     }
+    .widget_product_search form:not(.wp-block-search) button[type="submit"]::after {
+      color: ' . get_theme_mod('storefront_header_link_color') . ';
+    }
     .site-header-cart .widget_shopping_cart a.button, .site-header-cart .cart-contents {
       background-color: ' . get_theme_mod('accessible_storefront_header_button_background_color') . ';
       color: ' . get_theme_mod('accessible_storefront_header_button_text_color') . ';

@@ -271,3 +271,41 @@ a.remove::before {
     border-radius: 0 0 .25rem .25rem;
   }
 }
+
+/**
+ * Make product search usable with mouse.
+ */
+
+.site-search .widget_product_search form input[type="search"] {
+  padding: .6180469716em;
+  padding-right: 2.617924em;
+  line-height: unset;
+}
+
+.wp-child-theme-accessible-storefront .site-search .widget_product_search form::before {
+  display: none;
+}
+
+.widget_product_search form:not(.wp-block-search) button[type="submit"] {
+  clip: unset;
+  width: auto;
+  margin: 0;
+  right: 0;
+  left: auto;
+  height: 100%;
+  clip-path: none;
+  background-color: transparent;
+  color: transparent;
+}
+
+.widget_product_search form:not(.wp-block-search) button[type="submit"]::after {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  font-family: 'Font Awesome 5 Free';
+  content: '\f002';
+  position: absolute;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+}
