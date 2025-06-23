@@ -309,3 +309,31 @@ a.remove::before {
   justify-content: center;
   align-items: center;
 }
+
+/*
+ * Remove hidden items from tab flow.
+ */
+
+/* Mobile menu */
+@media (min-width: 768px) {
+  .main-navigation div.menu:last-child {
+    display: none;
+  }
+}
+#site-navigation-menu-toggle[aria-expanded="false"] ~ div.menu:last-child ul {
+  /*display: none;*/
+  visibility: hidden;
+}
+
+/* Mobile footer search bar */
+.storefront-handheld-footer-bar li.search:not(.active) .site-search {
+  visibility: hidden;
+}
+
+/*
+ * Make mobile menu transition shorter.
+ */
+
+.handheld-navigation, .nav-menu, .main-navigation div.menu > ul:not(.nav-menu) {
+  transition-duration: .3s;
+}
